@@ -1,0 +1,12 @@
+
+4월 03, 2025 09:31:13.35 NEW SESSION
+4월 03, 2025 09:31:13.35 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 03, 2025 09:31:13.48 [6216:15028:0403/093113.484:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 03, 2025 09:31:43.61 [6216:15028:0403/093143.618:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 03, 2025 09:32:41.05 [6216:15028:0403/093241.058:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 03, 2025 09:34:24.20 [6216:15028:0403/093424.200:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 03, 2025 09:37:41.98 [6216:15028:0403/093741.982:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 03, 2025 09:43:34.83 [6216:15028:0403/094334.830:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 03, 2025 11:19:13.82 [6216:12696:0403/111913.826:ERROR:device_event_log_impl.cc(202)] [11:19:13.826] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+4월 03, 2025 11:19:13.83 [6216:12696:0403/111913.837:ERROR:device_event_log_impl.cc(202)] [11:19:13.835] USB: usb_service_win.cc:308 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+4월 03, 2025 11:19:13.87 [6216:12696:0403/111913.876:ERROR:device_event_log_impl.cc(202)] [11:19:13.878] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
