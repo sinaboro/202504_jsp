@@ -26,37 +26,45 @@
 			<th>이름</th><th>아이디</th><th>암호</th>
 			<th>이메일</th><th>전화번호</th><th>권한(1:관리자, 0:일반회원)</th>
 		</tr>
-	<%
-		try{
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection(url,uid,pass);
-			stmt =  conn.createStatement();
-			rs = stmt.executeQuery(sql);
+		<%
 			
-			while(rs.next()){
-				out.println("<tr>");
-				out.println("<td>" + rs.getString("name") +"</td>");
-				out.println("<td>" + rs.getString("userid") +"</td>");
-				out.println("<td>" + rs.getString("pwd") +"</td>");
-				out.println("<td>" + rs.getString("email") +"</td>");
-				out.println("<td>" + rs.getString("phone") +"</td>");
-				out.println("<td>" + rs.getInt("admin") +"</td>");
-				out.println("</tr>");				
-			}
-			
-		}catch(Exception e){
-			e.printStackTrace();
-		}finally{
 			try{
-				if(rs != null) rs.close();
-				if(stmt != null) stmt.close();
-				if(conn != null) conn.close();
+				//1. 드라이브 로드(객체 생성)
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+				//2. DB연결
+			    conn = DriverManager.getConnection(url,uid,pass);
+			    //3. slq 구문 전송
+				stmt = conn.createStatement();
+			   
+			    //4. 조회한 결과 주소를 가지고 있음.
+			    rs = stmt.executeQuery(sql);  //select , 조회
+			    //stmt.executeUpdate(sql); // insert, update, delete
+			    
+			    //5. 결과 출력
+			    while(rs.next()){
+			    	out.println("<tr>");
+			    	out.println("<td>" + rs.getString("name") +"</td>");
+			    	out.println("<td>" + rs.getString("userid") +"</td>");
+			    	out.println("<td>" + rs.getString(3) +"</td>");
+			    	out.println("<td>" + rs.getString(4) +"</td>");
+			    	out.println("<td>" + rs.getString(5) +"</td>");
+			    	out.println("<td>" + rs.getInt(6) +"</td>");		    	
+			    	
+			    	out.println("</tr>"); 	
+			    }
 			}catch(Exception e){
 				e.printStackTrace();
+			}finally{
+				try{
+					rs.close();
+					stmt.close();
+					conn.close();
+				}catch(Exception e){
+					e.printStackTrace();
+				}
 			}
-		}
-	
-	%>	
+		%>
+		
 	</table>
 </body>
 </html>
