@@ -35,6 +35,17 @@ public class LoginServlet extends HttpServlet {
 		
 		int result =  mDao.userCheck(userid, pwd);
 		
+		switch(result) {
+			case  1:
+				System.out.println("로그인 여부 :  성공" );	
+			break;
+			case 0:
+				System.out.println("로그인 여부 :  비번 틀림 ");
+				break;
+			case -1 : 
+				System.out.println("로그인 여부 :  아이디 틀림 ");
+				break;		
+		}
 		System.out.println("로그인 여부 :  " + result );
 	}
 
