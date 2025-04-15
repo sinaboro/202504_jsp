@@ -6250,3 +6250,12 @@ Java Model Exception: Error in Java Model (code 979): Invalid path: '/web-study-
 
 !ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-04-15 10:48:03.119
 !MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-04-15 11:33:02.076
+!MESSAGE [Info]	ESLint server running in node v22.11.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-04-15 11:33:02.128
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.6.3 from path "D:\Dev\Utils\eclipse\plugins\org.eclipse.wildwebdeveloper_1.2.4.202411181846\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-04-15 11:33:02.131
+!MESSAGE [Info]	Typescript Server version info: {version=5.6.3, source=user-setting}

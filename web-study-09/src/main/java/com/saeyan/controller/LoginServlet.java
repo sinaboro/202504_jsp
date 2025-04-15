@@ -32,7 +32,10 @@ public class LoginServlet extends HttpServlet {
 		
 		//DB연결해서 userid, pwd 해당 자가 있는지 확인!
 		MemberDAO mDao = MemberDAO.getInstance();
-		mDao.userCheck(userid, pwd);
+		
+		int result =  mDao.userCheck(userid, pwd);
+		
+		System.out.println("로그인 여부 :  " + result );
 	}
 
 }

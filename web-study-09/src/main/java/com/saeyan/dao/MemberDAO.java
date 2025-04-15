@@ -32,7 +32,7 @@ public class MemberDAO {
 	}
 
 	//userid, pwd 전달받아서, DB랑 연동해서 데이타가 있는지 조회
-	public void userCheck(String userid, String pwd) {
+	public int userCheck(String userid, String pwd) {
 		
 		/*
 		 * 1  : userid, pwd 일치
@@ -45,10 +45,30 @@ public class MemberDAO {
 		String sql = "select pwd from member where userid = ?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		ResultSet rs = null;
+		ResultSet rs = null;  //sql구문이 select일때만 기입!
 		
 		try {
+			//1. DB연결
+			conn = getConnection();
+			//2. sql구문 전송
+			pstmt = conn.prepareStatement(sql);
+			//3. sql 맵핑
+			pstmt.setString(1, userid);
+			//4. sql 구문 실행
+			rs = pstmt.executeQuery(); //sql구문이 select일때만 
 			
+			if(rs.next()) {
+				//회원 ID 존재!
+				if(rs.getString("pwd") != null && 
+						rs.getString("pwd").equals(pwd)) {
+					result = 1;  //userid, pwd 일치
+				}else {
+					result = 0; //pwd만 불일치
+				}
+			}else {
+				//이런 회원id는 없다!
+				result = -1;
+			}
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
@@ -60,7 +80,7 @@ public class MemberDAO {
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
-		}
-		
+		}	
+		return result;
 	}
 }
