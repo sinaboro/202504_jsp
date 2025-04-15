@@ -4,7 +4,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <c:if test="${empty loginUser}">
-	<jsp:forward page="login.do"></jsp:forward>
+	<%-- <jsp:forward page="login.do"></jsp:forward> --%>
+	
+	<script type="text/javascript">
+		window.location.href="login.do";
+	</script>
+	
 </c:if> 
 
 <!DOCTYPE html>

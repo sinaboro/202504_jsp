@@ -59,9 +59,9 @@ public class LoginServlet extends HttpServlet {
 			
 			HttpSession session = request.getSession();
 			
-			session.setAttribute("loginUser", mVo);
+			session.setAttribute("loginUser", mVo);			
 			request.setAttribute("message", "회원 가입에 성공했습니다.");
-			System.out.println("============================================================");
+			
 			url = "main.jsp";			
 		}else if(result == 0) {
 			request.setAttribute("message", "비밀번호가 맞지 않습니다.");			

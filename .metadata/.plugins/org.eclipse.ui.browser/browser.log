@@ -612,3 +612,20 @@
 4월 04, 2025 14:26:54.07 [13860:2124:0404/142654.069:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
 4월 04, 2025 15:31:19.05 [13860:10160:0404/153119.052:ERROR:interface_endpoint_client.cc(725)] Message 1 rejected by interface blink.mojom.WidgetHost
 4월 04, 2025 15:31:19.05 [13860:10160:0404/153119.052:ERROR:interface_endpoint_client.cc(725)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+4월 15, 2025 16:24:28.39 NEW SESSION
+4월 15, 2025 16:24:28.40 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 15, 2025 16:24:28.86 [17132:15840:0415/162428.861:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 16:24:55.04 [17132:15840:0415/162455.045:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 16:25:40.03 [17132:15840:0415/162540.036:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 16:27:10.26 [17132:15840:0415/162710.264:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 16:30:42.50 [17132:15840:0415/163042.505:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 16:38:39.28 [17132:15840:0415/163839.285:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 17:00:19.51 [17132:4380:0415/170019.512:ERROR:device_event_log_impl.cc(202)] [17:00:19.512] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+4월 15, 2025 17:00:19.51 [17132:4380:0415/170019.517:ERROR:device_event_log_impl.cc(202)] [17:00:19.517] USB: usb_service_win.cc:308 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+4월 15, 2025 17:00:19.58 [17132:4380:0415/170019.586:ERROR:device_event_log_impl.cc(202)] [17:00:19.586] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+4월 15, 2025 17:19:27.06 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 15, 2025 17:19:29.40 [4408:16692:0415/171929.407:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 17:19:50.37 [4408:16692:0415/171950.374:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 17:20:45.36 [4408:16692:0415/172045.368:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 17:22:26.98 [4408:16692:0415/172226.983:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
