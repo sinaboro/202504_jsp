@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import com.saeyan.dto.MemberVO;
+
 public class MemberDAO {
 	
 	private static MemberDAO instance  = new MemberDAO();
@@ -83,4 +85,67 @@ public class MemberDAO {
 		}	
 		return result;
 	}
+
+	public MemberVO getMember(String userid) {
+		
+		MemberVO mVo = null;
+		
+		String sql = "select * from member where userid = ? ";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userid);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				String name = rs.getString("name"); 
+				String id = rs.getString("userid"); 
+				String pwd = rs.getString("pwd"); 
+				String email = rs.getString("email"); 
+				String phone = rs.getString("phone"); 
+				int admin = rs.getInt("admin"); 
+				
+				mVo = new MemberVO();
+				mVo.setName(name);
+				mVo.setUserid(id);
+				mVo.setPwd(pwd);
+				mVo.setEmail(email);
+				mVo.setPhone(phone);
+				mVo.setAdmin(admin);				
+			}
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(conn != null ) conn.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return mVo;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
