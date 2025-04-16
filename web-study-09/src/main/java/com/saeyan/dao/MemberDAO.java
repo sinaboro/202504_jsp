@@ -208,11 +208,50 @@ public class MemberDAO {
 				if(conn != null) conn.close();
 			}catch(Exception e) {
 				e.printStackTrace();
-			}
-		}
+			} //end catch
+		} //end finally
 		
 		return result;
-	}
+	} // end insertMember
+
+	public void updateMember(MemberVO mVo) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		                              //     1      2        3        4        5               6 
+		String sql = "update member set name=?, pwd=?, email=?, phone=?, admin=?  where userid=? ";
+		
+		try {
+			//1. DB 연결
+			conn = getConnection();
+			//2. sql구문 전송
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, mVo.getName());
+			pstmt.setString(2, mVo.getPwd());
+			pstmt.setString(3, mVo.getEmail());
+			pstmt.setString(4, mVo.getPhone());
+			pstmt.setInt(5, mVo.getAdmin());
+			pstmt.setString(6, mVo.getUserid());
+			
+			/* 3. sql 구문 실행
+				executeUpdate -> insert, update, delete시 사용
+				result : 0 -> 저장 실패
+				result : 1 -> 저장 성공
+				commit은 auto commit;
+			*/
+			int result = pstmt.executeUpdate();	
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(pstmt != null) pstmt.close();
+				if(conn != null) conn.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+	} //end updateMember
 }
 
 

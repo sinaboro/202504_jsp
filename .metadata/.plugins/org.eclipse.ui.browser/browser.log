@@ -645,3 +645,6 @@
 4월 16, 2025 12:52:45.49 [15460:3848:0416/125245.490:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
 4월 16, 2025 12:56:02.50 [15460:3848:0416/125602.502:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
 4월 16, 2025 13:02:12.93 [15460:3848:0416/130212.933:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 16, 2025 13:59:18.14 [15460:15612:0416/135918.147:ERROR:new_tab_page_handler.cc(1345)] NewTabPage loaded into a non-browser-tab context
+4월 16, 2025 14:42:09.27 [15460:15612:0416/144209.276:ERROR:CONSOLE(1)] "Extension server error: Operation failed: Permission denied", source: devtools://devtools/bundled/models/extensions/extensions.js (1)
+4월 16, 2025 14:42:09.28 [15460:15612:0416/144209.288:ERROR:CONSOLE(1)] "Received error with code E_FAILED while checking if react has loaded: "Operation failed: %s"", source: chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/main.js (1)

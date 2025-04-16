@@ -15,14 +15,14 @@
 		<table>
 			<tr>
 				<td>이름</td>
-				<td><input type="text" name="name" size="20">*</td>
+				<td><input type="text" name="name" size="20"
+					value="${mVo.name}" > </td>
 			</tr>
 			<tr>
 				<td>아이디</td>
 				<td>
-					<input type="text" name="userid" size="20" id="usesid">*
-					<input type="hidden" name="reid" size=20>
-					<input type="button" value="중복체크" onclick="idCheck()">
+					<input type="text" name="userid" size="20" value="${mVo.userid}" readonly>
+					<input type="hidden" name="reid" size=20 value="${mVo.userid}">
 				</td>
 			</tr>
 			<tr>
@@ -35,28 +35,32 @@
 			</tr>
 			<tr>
 				<td>이메일</td>
-				<td><input type="email" name="email" size="20"></td>
+				<td><input type="email" name="email" size="20" value="${mVo.email}"></td>
 			</tr>
 			<tr>
 				<td>전화번호</td>
-				<td><input type="text" name="phone" size="20"></td>
+				<td><input type="text" name="phone" size="20" value="${mVo.phone}"></td>
 			</tr>
 			<tr>
 				<td>등급</td>
 				<td>
-					<input type="radio" name="admin" value="1">관리자
-					<input type="radio" name="admin" value="0" checked="checked">일반회원
+					<c:if test="${mVo.admin==0}">
+						<input type="radio" name="admin" value="1">관리자
+						<input type="radio" name="admin" value="0" checked="checked">일반회원
+					</c:if>
+
+					<c:if test="${mVo.admin==1}">
+						<input type="radio" name="admin" value="1" checked="checked">관리자
+						<input type="radio" name="admin" value="0" >일반회원
+					</c:if>
 				</td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
-					<input type="submit" value="확인" onclick="return joinCheck()">
+					<input type="submit" value="수정" onclick="return joinCheck()">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
 					<input type="reset" value="취소">
 				</td>
-			</tr>
-			<tr>
-				<td colspan="2">${message}</td>
 			</tr>
 		</table>
 	</form>
