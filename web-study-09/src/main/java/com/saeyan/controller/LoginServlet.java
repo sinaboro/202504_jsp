@@ -21,7 +21,22 @@ public class LoginServlet extends HttpServlet {
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		RequestDispatcher dis = request.getRequestDispatcher("member/login.jsp");
+		String url = "member/login.jsp";
+		
+		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("loginUser") != null) {
+			
+			MemberVO mVo  = (MemberVO)session.getAttribute("loginUser");
+			
+			MemberDAO mDao = MemberDAO.getInstance();
+			mVo = mDao.getMember(mVo.getUserid());			
+			
+			session.setAttribute("loginUser", mVo);		
+			url = "main.jsp";
+		}
+		
+		RequestDispatcher dis = request.getRequestDispatcher(url);
 		dis.forward(request, response);
 		
 	}

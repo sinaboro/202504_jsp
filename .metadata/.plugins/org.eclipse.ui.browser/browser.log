@@ -660,3 +660,14 @@
 4월 16, 2025 14:46:56.73 [15460:15612:0416/144656.734:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/models/extensions/extensions.js (1)
 4월 16, 2025 14:46:56.73 [15460:15612:0416/144656.734:ERROR:CONSOLE(1)] "Cannot find context with specified id", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
 4월 16, 2025 14:46:56.73 [15460:15612:0416/144656.734:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/models/extensions/extensions.js (1)
+4월 16, 2025 15:20:06.19 [15460:3848:0416/152006.198:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+4월 16, 2025 15:20:26.22 [15460:3848:0416/152026.227:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 16, 2025 15:21:12.79 [15460:3848:0416/152112.797:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 16, 2025 15:22:27.78 [15460:3848:0416/152227.782:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 16, 2025 15:23:06.11 [15460:15612:0416/152306.111:ERROR:CONSOLE(1)] "Request Runtime.evaluate failed. {"code":-32602,"message":"uniqueContextId not found"}", source: devtools://devtools/bundled/core/protocol_client/protocol_client.js (1)
+4월 16, 2025 15:23:06.11 [15460:15612:0416/152306.111:ERROR:CONSOLE(1)] "uniqueContextId not found", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+4월 16, 2025 15:23:06.11 [15460:15612:0416/152306.111:ERROR:CONSOLE(1)] "Extension server error: Inspector protocol error: uniqueContextId not found", source: devtools://devtools/bundled/models/extensions/extensions.js (1)
+4월 16, 2025 15:24:35.65 [15460:3848:0416/152435.649:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 16, 2025 15:27:48.92 [15460:3848:0416/152748.919:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 16, 2025 15:34:03.78 [15460:3848:0416/153403.787:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 16, 2025 15:44:25.45 [15460:3848:0416/154425.451:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -118
