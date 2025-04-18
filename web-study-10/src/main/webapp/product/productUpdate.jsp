@@ -13,8 +13,8 @@
    <div id="wrap" align="center">
       <h1>상품 수정 - 관리자 페이지</h1>
       <form method="post" enctype="multipart/form-data" name="frm">
-         <input type="hidden" name="code" value="${product.code}"> <input
-            type="hidden" name="nonmakeImg" value="${product.pictureUrl}">
+         <input type="hidden" name="code" value="${product.code}"> 
+         <input type="hidden" name="nonmakeImg" value="${product.pictureUrl}">
          <table>
             <tr>
                <td><c:choose>
@@ -51,10 +51,10 @@
                </td>
             </tr>
          </table>
-         <br> <input type="submit" value="수정"
-            onclick="return productCheck()"> <input type="reset"
-            value="다시작성"> <input type="button" value="목록"
-            onclick="location.href='productList.do'">
+         <br> 
+         <input type="submit" value="수정"  onclick="return productCheck()"> 
+         <input type="reset"  value="다시작성"> 
+         <input type="button" value="목록" onclick="location.href='productList.do'">
       </form>
    </div>
 </body>

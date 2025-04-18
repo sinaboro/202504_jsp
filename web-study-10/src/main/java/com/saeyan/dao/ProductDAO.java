@@ -141,6 +141,35 @@ public class ProductDAO {
 		
 		return pVo;
 	}  //end selectOne
+
+	public void updateProduct(ProductVO pVo) {
+		
+		String sql = "update product set name=?, price=?, pictureurl = ?, description = ? where code = ?";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			//1 연결
+			conn = DBManager.getConnection();
+			//2 sql구문 전송
+			pstmt = conn.prepareStatement(sql);
+			//3. sql 맵핑
+			pstmt.setString(1, pVo.getName());
+			pstmt.setInt(2, pVo.getPrice());
+			pstmt.setString(3, pVo.getPictureUrl());
+			pstmt.setString(4, pVo.getDescription());
+			pstmt.setInt(5, pVo.getCode());
+			
+			//4. 실행
+			pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt);
+		}
+	} // end updateProduct
 	
 }
 
