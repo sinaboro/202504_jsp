@@ -53,9 +53,9 @@ public class UploadServlet extends HttpServlet {
 			if(fileName == null) {
 				System.out.println("파일 업로드 되지 않았습니다.");
 			}else {
-				multi.getParameter("name");
-				multi.getParameter("title");
-				multi.getFilesystemName("uploadFile");
+			 out.println("<br> 글쓴이 : " + multi.getParameter("name"));
+			 out.println("<br> 제목 : " +	multi.getParameter("title"));
+			 out.println("<br> 파일명 : " + multi.getFilesystemName("uploadFile"));
 			}
 			
 		}catch(Exception e) {
