@@ -21,10 +21,12 @@ public class ProductDAO {
 		return instance;
 	}
 	
+	// DB에서 전체 목록 가져오기
 	public List<ProductVO> selectAllProducts(){
 		String sql = "select * from product order by code desc";
 		
 		List<ProductVO> list = new ArrayList<ProductVO>();
+		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -72,5 +74,51 @@ public class ProductDAO {
 		}	
 		
 		return list;
-	}
+	}  // end selectAllProducts
+
+	public void insertProduct(ProductVO pVo) {
+		String sql = "insert into product values(product_seq.nextval, ?, ?, ?, ?)";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			//1 연결
+			conn = DBManager.getConnection();
+			//2 sql구문 전송
+			pstmt = conn.prepareStatement(sql);
+			//3. sql 맵핑
+			pstmt.setString(1, pVo.getName());
+			pstmt.setInt(2, pVo.getPrice());
+			pstmt.setString(3, pVo.getPictureUrl());
+			pstmt.setString(4, pVo.getDescription());
+			
+			//4. 실행
+			pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt);
+		}
+	} // end insertProduct
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
