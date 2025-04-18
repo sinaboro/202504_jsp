@@ -671,3 +671,5 @@
 4월 16, 2025 15:27:48.92 [15460:3848:0416/152748.919:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
 4월 16, 2025 15:34:03.78 [15460:3848:0416/153403.787:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
 4월 16, 2025 15:44:25.45 [15460:3848:0416/154425.451:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -118
+4월 16, 2025 16:50:40.08 [15460:15612:0416/165040.088:ERROR:interface_endpoint_client.cc(725)] Message 1 rejected by interface blink.mojom.WidgetHost
+4월 16, 2025 19:00:52.75 [15460:3848:0416/190052.758:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
