@@ -102,6 +102,45 @@ public class ProductDAO {
 			DBManager.close(conn, pstmt);
 		}
 	} // end insertProduct
+
+	public ProductVO selectProductByCode(String code) {
+		
+		ProductVO pVo = null;
+		
+		String sql = "select * from product where code = ?";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			//1 연결
+			conn = DBManager.getConnection();
+			//2 sql구문 전송
+			pstmt = conn.prepareStatement(sql);
+			//3. sql 맵핑
+			pstmt.setInt(1,  Integer.parseInt(code));			
+			
+			//4. 실행
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				pVo = new ProductVO();
+				pVo.setCode(rs.getInt("code"));
+				pVo.setName(rs.getString("name"));
+				pVo.setPrice(rs.getInt("price"));
+				pVo.setPictureUrl(rs.getString("pictureurl"));
+				pVo.setDescription(rs.getString("description"));
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+		
+		return pVo;
+	}  //end selectOne
 	
 }
 
