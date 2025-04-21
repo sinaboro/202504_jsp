@@ -16,3 +16,7 @@ function productCheck() {
 	}
 	return true;
 }
+
+function chkDelete(){
+	return ture;
+}
