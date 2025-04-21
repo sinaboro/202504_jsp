@@ -17,6 +17,10 @@ function productCheck() {
 	return true;
 }
 
-function chkDelete(){
-	return ture;
+function chkDelete() {
+	 if(confirm("정말로 삭제하시나요?")) {
+	   return true;
+	 } else {
+	   return false;
+	 }	 
 }
