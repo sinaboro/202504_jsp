@@ -12,7 +12,7 @@ import com.saeyan.controller.action.ActionFactory;
 
 
 //Spring --> DispatcherSevlet(Front Controller)
-@WebServlet("/BoardServlet")
+@WebServlet("/boardServlet")
 public class BoardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

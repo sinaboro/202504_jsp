@@ -16,6 +16,10 @@ public class ActionFactory {
 		
 		System.out.println("ActionFactory : " + command);
 		
+		if(command.equals("board_list")) {
+			action = new BoardListAction();
+		}
+				
 		return action;
 	}
 }
