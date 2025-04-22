@@ -12,11 +12,13 @@ import com.saeyan.controller.action.ActionFactory;
 
 
 //Spring --> DispatcherSevlet(Front Controller)
-@WebServlet("/boardServlet")
+@WebServlet("/BoardServlet")
 public class BoardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		//BoardServlet?command=board_write
 		String command = request.getParameter("command");
 		System.out.println("BoardServlet에서 요청을 받음을 확인 : " + command);
 		

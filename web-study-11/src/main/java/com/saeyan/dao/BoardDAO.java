@@ -63,7 +63,38 @@ public class BoardDAO {
 		
 		return list;
 	} // end selectAllBoards
+
+	//데이타 추가하기
+	public void insertBoard(BoardVO bVo) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
 	
+		String sql = "insert into board(num, name, pass, email, title, content) "
+				+ "values(board_seq.nextval ,?,?,?,?,?)";
+		try {
+			//1. DB연결
+			conn = DBManager.getConnection();
+			
+			//2. sql전송
+			pstmt = conn.prepareStatement(sql);
+			
+			//3. sql 맵핑
+			pstmt.setString(1, bVo.getName());
+			pstmt.setString(2, bVo.getPass());
+			pstmt.setString(3, bVo.getEmail());
+			pstmt.setString(4, bVo.getTitle());
+			pstmt.setString(5, bVo.getContent());
+			
+			//4. sql 실행
+			pstmt.executeQuery();			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt);
+		}
+	}// end insertBoard
 	
 	//단건 데이타 가져오기
 	//데이타 수정하기

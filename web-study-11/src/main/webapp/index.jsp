@@ -10,7 +10,7 @@
 	<!-- <a href="login.do">로그인 페이지로 이동</a> -->
 	
 	<script type="text/javascript">
-		window.location.href="productList.do";
+		window.location.href="BoardServlet?command=board_list";
 	</script>
 </body>
 </html>
