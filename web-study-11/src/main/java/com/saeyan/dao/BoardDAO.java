@@ -163,9 +163,31 @@ public class BoardDAO {
 		}
 		
 	} // end updateReadCount
+
+	//데이타 삭제하기
+	public void deleteBoard(int num) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+	
+		String sql = "delete from board  where num = ?";
+		try {
+			//1. DB연결
+			conn = DBManager.getConnection();
+			//2. sql전송
+			pstmt = conn.prepareStatement(sql);
+			//3. sql 맵핑
+			pstmt.setInt(1, num);		
+			//4. sql 실행
+			pstmt.executeUpdate();			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt);
+		}
+	} //end deleteBoard
 	
 	
 	//데이타 수정하기
 	//데이타 추가하기
-	//데이타 삭제하기
 }

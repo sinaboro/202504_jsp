@@ -7393,3 +7393,6 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY org.eclipse.lsp4e 1 0 2025-04-23 14:45:13.332
 !MESSAGE [Info]	ESLint server running in node v22.11.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-04-23 16:12:48.018
+!MESSAGE [Info]	ESLint server running in node v22.11.0
