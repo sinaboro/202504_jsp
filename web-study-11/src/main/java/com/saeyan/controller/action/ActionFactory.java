@@ -1,5 +1,6 @@
 package com.saeyan.controller.action;
 
+
 public class ActionFactory {
 
 	private static ActionFactory instance  = new ActionFactory();
@@ -10,7 +11,7 @@ public class ActionFactory {
 	public static ActionFactory getInstance(){
 		return instance;
 	}
-	                        //board_write_form
+	                        //board_view
 	public Action getAction(String command) {
 		Action action = null;
 		
@@ -22,6 +23,8 @@ public class ActionFactory {
 			action = new BoardWriteFormAction();
 		}else if(command.equals("board_write")) {
 			action = new BoardWriteAction();
+		}else if(command.equals("board_view")) {
+			action = new BoardViewAction();
 		}
 				
 		return action;
