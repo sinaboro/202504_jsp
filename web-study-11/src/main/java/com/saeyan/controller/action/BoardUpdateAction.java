@@ -9,11 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.saeyan.dao.BoardDAO;
 import com.saeyan.dto.BoardVO;
 
-public class BoardWriteAction implements Action{
+public class BoardUpdateAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String num = request.getParameter("num");
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
 		String email = request.getParameter("email");
@@ -21,32 +22,20 @@ public class BoardWriteAction implements Action{
 		String content = request.getParameter("content");
 		
 		BoardVO bVo = new BoardVO();
+		bVo.setNum(Integer.parseInt(num));
 		bVo.setName(name);
 		bVo.setPass(pass);
 		bVo.setEmail(email);
 		bVo.setTitle(title);
 		bVo.setContent(content);
 		
-		BoardDAO bDao = BoardDAO.getInstance();
+//		BoardDAO bDao = BoardDAO.getInstance();
+//		bDao.updateBoard(bVo);
 		
-		bDao.insertBoard(bVo);
+		BoardDAO.getInstance().updateBoard(bVo);
 		
+		//리스트 목록 이동
 		new BoardListAction().execute(request, response);
-//		response.sendRedirect("BoardServlet?command=board_list");
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
